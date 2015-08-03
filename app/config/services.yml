@@ -1,0 +1,6 @@
+services:
+  drupal.twig.extension:
+    class: App\DrupalInfo
+    public: false
+    tags:
+      -  { name: twig.extension }

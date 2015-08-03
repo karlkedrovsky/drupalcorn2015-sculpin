@@ -1,0 +1,12 @@
+sculpin:
+  ignore: ["**/gulpfile.js", "**/node_modules/**/*", "**/scss/**/*"]
+
+sculpin_content_types:
+  posts:
+    enabled: false
+  drupalsites:
+    permalink: drupalsites/:basename/index.html
+    layout: drupalsite
+
+sculpin_theme:
+  theme: karlkedrovsky/drupalcorn

@@ -1,0 +1,23 @@
+{% extends "default" %}
+
+{% block content_type %}&mdash; Drupal Site{% endblock %}
+
+{% set info = drupalInfo(page.drush_alias) %}
+{% set modules = drupalModules(page.drush_alias) %}
+
+{% block extra %}
+<h3>Drupal info:</h3>
+
+<table>
+  <tr><td>URI:</td><td>{{ info.uri }}</td></tr>
+</table>
+
+<h3>Drupal Modules:</h3>
+
+<table>
+  <tr><th>Name</th><th>Version</th></tr>
+  {% for module in modules %}
+    <tr><td>{{ module.name }}</td><td>{{ module.version }}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}
